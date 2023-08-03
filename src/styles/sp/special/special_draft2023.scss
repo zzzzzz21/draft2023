@@ -1,0 +1,601 @@
+@use '../../common/baseSP';
+@use '../../object/library/microModal';
+
+.itadakimeshi {
+    background: var(--COLOR_BACKGROUND_ITADAKIMESHI);
+    padding-bottom: 70px;
+
+    * {
+      box-sizing: border-box;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+    }
+
+    letter-spacing: .025em;
+    line-height: 1.7;
+
+    .modal__container {
+      padding: 15px;
+    }
+}
+
+.l-mainVisual {
+  &__title {
+    img {
+      height: auto;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.l-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 1240px;
+  margin: 25px auto 0;
+  padding: 0 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.l-main {
+
+}
+
+.l-aside {
+}
+
+.l-bottomBanner {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  padding: 65px 0 42px;
+
+  &::before {
+    background: url(../../../img/special/itadakimeshi/bg_icon-3.png) center/100% no-repeat;
+    content: "";
+    height: 168px;
+    left: 25%;
+    position: absolute;
+    top: -62px;
+    width: 293px;
+  }
+
+  &__link {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.m-introduction {
+  position: relative;
+  text-align: center;
+
+  &::before {
+    background: url(../../../img/special/itadakimeshi/bg_icon-1.png) center/100% no-repeat;
+    content: "";
+    height: 128px;
+    position: absolute;
+    right: -32px;
+    bottom: -52px;
+    width: 156px;
+  }
+
+  &__image {
+    margin-bottom: 12px;
+  }
+
+  &__date {
+    color:  var(--COLOR_TEXT_GRAY);
+    display: block;
+    font-size: 11px;
+  }
+
+  &__head {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    line-height: 1.2;
+  }
+
+  &__index {
+    align-items: center;
+    background: var(--COLOR_BASE_YELLOW);
+    border-radius: 6px;
+    color: var(--COLOR_TEXT_WHITE);
+    display: flex;
+    flex: 0 0 48px;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    padding: 2px 5px;
+    text-align: center;
+    width: 48px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: normal;
+    font-weight: 700;
+  }
+
+  &__subheading {
+    color: var(--COLOR_BASE_YELLOW);
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+
+  &__text {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 12px;
+  }
+}
+
+.m-item-list {
+  margin-top: 20px;
+  position: relative;
+
+  &::before {
+    background: url(../../img/special/itadakimeshi/bg_icon-2.png) center/auto no-repeat;
+    content: "";
+    height: 77px;
+    left: -349px;
+    position: absolute;
+    top: 62px;
+    width: 273px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 8px;
+  }
+}
+
+.m-banner-list {
+  margin: 40px auto 0;
+}
+
+.m-pager {
+  margin-top: 42px;
+}
+
+.m-backnumber {
+  align-items: center;
+  background: var(--COLOR_BACKGROUND_WHITE);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__head {
+    padding: 13px 0;
+  }
+
+  &__list {
+    width: 100%;
+  }
+
+  &__item {
+    border: 1px dashed var(--COLOR_BORDER_ITADAKIMESHI);
+  }
+
+  &__link {
+    align-items: center;
+    display: flex;
+    gap: 14px;
+    min-height: 60px;
+    padding: 10px 10px 10px 60px;
+
+    &:hover,
+    &.is-current {
+      opacity: 1;
+      background: var(--COLOR_BACKGROUND_BAIGE_LIGHT);
+    }
+
+  }
+
+  &__index {
+    align-items: center;
+    background: var(--COLOR_BASE_GRAY);
+    display: flex;
+    font-size: 13px;
+    flex: 0 0 27px;
+    height: 27px;
+    justify-content: center;
+    line-height: 1;
+    text-align: center;
+    width: 27px;
+  }
+
+  &__text {
+    font-size: 13px;
+  }
+
+  &__toggle {
+    background-color: var(--COLOR_BACKGROUND_BAIGE_DARK);
+    border: none;
+    color: var(--COLOR_TEXT_BLUE_DARK);
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    min-height: 64px;
+    padding: 10px;
+    transition: all ease .3s;
+    width: 100%;
+
+    &:hover {
+      background-color: var(--COLOR_TEXT_BLUE_DARK);
+      color:  var(--COLOR_TEXT_WHITE);
+      & > span {
+        &::after {
+          border-color: var(--COLOR_TEXT_WHITE);
+        }
+      }
+    }
+
+    & > span {
+      align-items: center;
+      color: inherit;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      position: relative;
+
+      &::after {
+        border-bottom: 2px solid var(--COLOR_TEXT_BLUE_DARK);
+        border-right: 2px solid var(--COLOR_TEXT_BLUE_DARK);
+        content: "";
+        display: inline-block;
+        height: 6px;
+        margin: -4px 0 0;
+        transform: rotate(45deg);
+        transition: all ease .3s;
+        width: 6px;
+      }
+    }
+
+    &[aria-expanded="true"] {
+      & > span {
+        &::after {
+          margin: 4px 0 0;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  &__disclosure {
+    width: 100%;
+  }
+}
+
+.m-card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 64px;
+  padding-bottom: 64px;
+  position: relative;
+
+  &::after {
+    background: url(../../../img/special/itadakimeshi/bg_icon-2.png) center/100% no-repeat;
+    bottom: 0;
+    content: "";
+    height: 38px;
+    position: absolute;
+    left: -15px;
+    width: 136px;
+  }
+}
+
+.c-modal-button {
+  position: relative;
+
+  &::before {
+    background: url(../../../img/special/itadakimeshi/icon_plus.png) center/auto no-repeat;
+    bottom: 12px;
+    content: "";
+    height: 25px;
+    left: 12px;
+    position: absolute;
+    width: 24px;
+  }
+}
+
+.c-card {
+  background: var(--COLOR_BACKGROUND_WHITE);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 16px 17px 30px;
+  position: relative;
+
+  &__image {
+    font-size: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & button {
+      width: 100%;
+      &:nth-child(1) {
+        margin-bottom: 1em;
+      }
+      &:nth-child(n+2) {
+        width: calc((100% - 1em) / 2);
+      }
+    }
+
+    & img {
+      object-fit: fill;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    margin-top: 20px;
+  }
+
+  &__dt {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__dd {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+
+.c-card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+
+  & a {
+    color: blue;
+  }
+
+  &__image {
+    border-radius: 10px;
+    font-size: 0;
+    overflow: hidden;
+
+    & button {
+      width: 100%;
+    }
+
+    & img {
+      object-fit: fill;
+      width: 100%;
+    }
+  }
+
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+  }
+
+  &__title {
+    font-size: 13px;
+  }
+
+  &__icon {
+    flex: 0 0 62px;
+    height: 45px;
+    img {
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      margin-left: auto;
+      width: auto;
+    }
+  }
+
+  &__subheading {
+    font-size: 12px;
+  }
+
+  &__text {
+    font-size: 12px;
+  }
+}
+
+.c-card-story {
+  background: var(--COLOR_BACKGROUND_BAIGE_DARK);
+  border-radius: 10px;
+  margin-top: 48px;
+  padding: 18px 10px 25px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 8px;
+  }
+
+  &__image {
+    font-size: 0;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+  }
+
+  &__space {
+    float: left;
+  }
+
+  &__logo {
+    clear: both;
+    float: left;
+  }
+
+  &__text {
+    line-height: 1.9;
+  }
+}
+
+.c-heading {
+  align-items: center;
+  display: flex;
+  font-size: 17px;
+  gap: 6px;
+  justify-content: center;
+
+  &::before {
+    border: 4px solid var(--COLOR_BASE_YELLOW);
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: "";
+    display: flex;
+    height: 15px;
+    width: 15px;
+  }
+
+  &--small {
+    &::before {
+      height: 21px;
+      width: 21px;
+    }
+  }
+}
+
+.c-list-definition {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  gap: 12px 20px;
+
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 2px;
+  }
+
+  &__term {
+    background: var(--COLOR_BACKGROUND_BAIGE_DARK);
+    border-radius: 3.5px;
+    line-height: 1.4;
+    padding: 0 7px;
+  }
+
+  &__description {
+    padding-left: 5px;
+    &__meta {
+      margin: .4m 0;
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+        height: 2.8em;
+        &:nth-child(2) {
+          height:1.6em;
+        }
+      }
+    }
+  }
+
+}
+
+.c-list-bullet {
+  color: #666;
+  font-size: 12px;
+
+  &__item {
+    display: flex;
+  }
+}
+
+.c-pager {
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+
+    &--next {
+      align-items: flex-end;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__arrow {
+    color: var(--COLOR_TEXT_BLUE_DARK);
+    display: flex;
+    font-size: 15px;
+    gap: 5px;
+
+    &--prev {
+      &::before {
+        content: "＜";
+      }
+    }
+    &--next {
+      &::after {
+        content: "＞";
+      }
+    }
+  }
+}
+
+.c-list-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.js-floating-image {
+  &__spacer {
+    float: left;
+  }
+
+  &__image {
+    clear: both;
+    float: right;
+    margin: 10px 0 0 10px;
+    max-width: 100px;
+  }
+}
+
+.js-disclosure {
+  &__content {
+    &:not(.is-show) {
+      li:nth-of-type(n + 5) {
+        display: none;
+      }
+    }
+  }
+}
