@@ -1,5 +1,6 @@
 .social {
   background: #dcd9dc;
+  margin-top: -1px;
 }
 
 footer {
@@ -8,6 +9,7 @@ footer {
 
 .banner-howto {
   background: #dcd9dc;
+  margin-top: -1px;
   padding: 20px 0 90px;
 }
 .banner-howto .cmn-btn.cmn-btn-logo {
@@ -378,9 +380,19 @@ footer {
 }
 .draft .content-bottom {
   background: #dcd9dc;
-  padding: 15.625vw 20px 0;
+  padding: 15.625vw 20px 9.375vw;
 }
-
+.draft .m-sptvLink__title {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 12.8125vw;
+  background: url(../../../img/sp/special/draft2023/sptv1.png) no-repeat;
+  background-size: 100% auto;
+  position: relative;
+}
 .draft .banner-list {
   align-items: center;
   background: #fefefe;

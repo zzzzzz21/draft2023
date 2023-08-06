@@ -1,5 +1,6 @@
 .social {
   background: #dcd9dc;
+  margin-top: -1px;
 }
 
 footer {
@@ -8,6 +9,7 @@ footer {
 
 .banner-howto {
   background: #dcd9dc;
+  margin-top: -1px;
   padding: 20px 0 90px;
 
   .cmn-btn.cmn-btn-logo {
@@ -462,11 +464,21 @@ footer {
 
   .content-bottom {
     background: #dcd9dc;
-    padding: calc(100 / 640 * 100vw) 20px 0;
+    padding: calc(100 / 640 * 100vw) 20px calc(60 / 640 * 100vw);;
   }
 
-}
-.draft  {
+  .m-sptvLink__title {
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    height: calc(82 / 640 * 100vw);
+    background: url(../../../img/sp/special/draft2023/sptv1.png) no-repeat;
+    background-size: 100% auto;
+    position: relative;
+  }
+
   .banner-list {
     align-items: center;
     background: #fefefe;
@@ -548,4 +560,5 @@ footer {
       }
     }
   }
+
 }
