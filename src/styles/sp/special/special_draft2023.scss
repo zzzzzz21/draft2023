@@ -464,7 +464,11 @@ footer {
 
   .content-bottom {
     background: #dcd9dc;
-    padding: calc(100 / 640 * 100vw) 20px calc(60 / 640 * 100vw);;
+    padding: calc(100 / 640 * 100vw) 20px calc(60 / 640 * 100vw);
+
+    img {
+      width: 100%;
+    }
   }
 
   .m-sptvLink__title {
@@ -488,6 +492,14 @@ footer {
     gap: 15px;
     margin: 0 auto;
     padding: 30px 5px;
+
+    li {
+      display: flex;
+
+      &:nth-of-type(odd) {
+        justify-content: flex-end;
+      }
+    }
   }
 
   .draft-map {

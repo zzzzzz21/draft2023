@@ -382,6 +382,9 @@ footer {
   background: #dcd9dc;
   padding: 15.625vw 20px 9.375vw;
 }
+.draft .content-bottom img {
+  width: 100%;
+}
 .draft .m-sptvLink__title {
   display: block;
   text-indent: 100%;
@@ -402,6 +405,12 @@ footer {
   gap: 15px;
   margin: 0 auto;
   padding: 30px 5px;
+}
+.draft .banner-list li {
+  display: flex;
+}
+.draft .banner-list li:nth-of-type(odd) {
+  justify-content: flex-end;
 }
 .draft .draft-map {
   height: 0;
