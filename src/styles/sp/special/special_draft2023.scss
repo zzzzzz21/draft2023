@@ -359,6 +359,8 @@ footer {
       span {
         font-size: 12px;
         font-weight: normal;
+        display: block;
+        margin: 5px 0 0;
       }
     }
 
@@ -389,6 +391,11 @@ footer {
 
     .program-column-visual {
       position: relative;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
     }
 
     .program-column-number {

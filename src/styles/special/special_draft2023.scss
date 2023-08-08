@@ -263,20 +263,6 @@ div#main {
     }
   }
 
-  .program-content-visual {
-    flex: 0 0 476px;
-
-    img {
-      width: 100%;
-    }
-
-    small {
-      margin-top: 10px;
-      font-size: 13px;
-      display: block;
-    }
-  }
-
   .program-content-detail {
     margin: -10px 0 0 27px;
 
@@ -304,6 +290,7 @@ div#main {
     font-size: 13px;
     line-height: 1.6;
     margin-top: 10px;
+    padding-left: 120px;
   }
 
   .content-bottom {
@@ -352,6 +339,8 @@ div#main {
     .program-content {
       display: flex;
       margin-top: 80px;
+      padding-left: 100px;
+      position: relative;
     }
 
     .program-title-sub {
@@ -368,10 +357,11 @@ div#main {
     }
 
     .program-content-visual {
-      flex: 0 0 100px;
-
+      position: absolute;
+      left: 0;
       img {
-        width: auto;
+        width: 100px;
+        height: auto;
       }
     }
 
@@ -383,12 +373,13 @@ div#main {
       span {
         font-size: 16px;
         font-weight: normal;
+        margin-left: .5em;
       }
     }
 
     .program-content-detail {
       width: auto;
-      margin: 0 0 0 30px;
+      margin: 0 0 0 20px;
     }
 
     .program-content-caption-text {
@@ -459,6 +450,9 @@ div#main {
 
       a {
         color: #fff;
+        &::before {
+          content: "→ "
+        }
       }
     }
   }
@@ -555,11 +549,16 @@ div#main {
 
   .article-column-text {
     font-size: 20px;
-    padding: 10px 0 0 30px;
+    padding: 10px 20px 0 30px;
   }
 
   .article-column-link {
     font-size: 14px;
     margin: 10px 0 0 auto;
+    white-space: nowrap;
+
+    &::before {
+      content: "→ ";
+    }
   }
 }
