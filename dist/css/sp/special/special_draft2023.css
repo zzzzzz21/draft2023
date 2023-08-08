@@ -285,6 +285,8 @@ footer {
 .draft .road_to_draft .writer-name span {
   font-size: 12px;
   font-weight: normal;
+  display: block;
+  margin: 5px 0 0;
 }
 .draft .road_to_draft .program-content-detail {
   width: auto;

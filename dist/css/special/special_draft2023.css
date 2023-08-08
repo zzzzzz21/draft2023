@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .c-sptv {
   text-align: center;
 }
@@ -62,6 +63,9 @@ div#main {
 .draft .content-block.red .heading-title {
   font-size: 42px;
   padding: 80px 0 70px;
+}
+.draft .content-block.red .heading-title .sp-view {
+  display: none;
 }
 .draft .content-block.red .heading-title span {
   font-size: 32px;
@@ -219,17 +223,6 @@ div#main {
 .draft .program-content.mt {
   margin-top: 40px;
 }
-.draft .program-content-visual {
-  flex: 0 0 476px;
-}
-.draft .program-content-visual img {
-  width: 100%;
-}
-.draft .program-content-visual small {
-  margin-top: 10px;
-  font-size: 13px;
-  display: block;
-}
 .draft .program-content-detail {
   margin: -10px 0 0 27px;
 }
@@ -252,6 +245,7 @@ div#main {
   font-size: 13px;
   line-height: 1.6;
   margin-top: 10px;
+  padding-left: 120px;
 }
 .draft .content-bottom {
   padding: 120px 0 40px;
@@ -290,6 +284,8 @@ div#main {
 .draft .road_to_draft .program-content {
   display: flex;
   margin-top: 80px;
+  padding-left: 100px;
+  position: relative;
 }
 .draft .road_to_draft .program-title-sub {
   color: #fff;
@@ -303,10 +299,12 @@ div#main {
   line-height: 1.5;
 }
 .draft .road_to_draft .program-content-visual {
-  flex: 0 0 100px;
+  position: absolute;
+  left: 0;
 }
 .draft .road_to_draft .program-content-visual img {
-  width: auto;
+  width: 100px;
+  height: auto;
 }
 .draft .road_to_draft .writer-name {
   font-size: 22px;
@@ -316,10 +314,11 @@ div#main {
 .draft .road_to_draft .writer-name span {
   font-size: 16px;
   font-weight: normal;
+  margin-left: 0.5em;
 }
 .draft .road_to_draft .program-content-detail {
   width: auto;
-  margin: 0 0 0 30px;
+  margin: 0 0 0 20px;
 }
 .draft .road_to_draft .program-content-caption-text {
   font-size: 14px;
@@ -378,6 +377,9 @@ div#main {
 }
 .draft .road_to_draft .program-column-link a {
   color: #fff;
+}
+.draft .road_to_draft .program-column-link a::before {
+  content: "→ ";
 }
 .draft .top-present {
   position: relative;
@@ -460,9 +462,13 @@ div#main {
 }
 .draft .article-column-text {
   font-size: 20px;
-  padding: 10px 0 0 30px;
+  padding: 10px 20px 0 30px;
 }
 .draft .article-column-link {
   font-size: 14px;
   margin: 10px 0 0 auto;
+  white-space: nowrap;
+}
+.draft .article-column-link::before {
+  content: "→ ";
 }

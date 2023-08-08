@@ -368,6 +368,8 @@ footer {
       span {
         font-size: 12px;
         font-weight: normal;
+        display: block;
+        margin: 5px 0 0;
       }
     }
 
@@ -398,7 +400,6 @@ footer {
 
     .program-column-visual {
       position: relative;
-
       a {
         display: block;
 
