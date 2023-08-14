@@ -243,9 +243,9 @@ footer {
     margin: 20px 0 0;
 
     .player-card {
-      //      width: calc((100% - 28px)/2);
+       width: calc((100% - 28px)/2);
 
-      &:nth-of-type(n + 2) {
+      &:nth-of-type(n + 3) {
         margin: 28px 0 0;
       }
     }
