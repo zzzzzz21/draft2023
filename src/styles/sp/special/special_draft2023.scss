@@ -407,6 +407,10 @@ footer {
           width: 100%;
         }
       }
+      &-caption {
+        display: block;
+        margin-top: .8em;
+      }
     }
 
     .program-column-number {
@@ -431,7 +435,7 @@ footer {
 
       dt {
         font-size: 18px;
-        line-height: 1;
+        line-height: 1.6;
         font-weight: bold;
       }
 

@@ -340,6 +340,10 @@ div#main {
   flex: 0 0 360px;
   position: relative;
 }
+.draft .road_to_draft .program-column-visual-caption {
+  display: block;
+  margin-top: 0.8em;
+}
 .draft .road_to_draft .program-column-number {
   background: #ff0000;
   color: #fff;
@@ -359,7 +363,7 @@ div#main {
 }
 .draft .road_to_draft .program-column-title dt {
   font-size: 22px;
-  line-height: 1;
+  line-height: 1.6;
   font-weight: bold;
 }
 .draft .road_to_draft .program-column-title dd {

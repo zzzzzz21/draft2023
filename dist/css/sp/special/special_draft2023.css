@@ -320,6 +320,10 @@ footer {
 .draft .road_to_draft .program-column-visual a img {
   width: 100%;
 }
+.draft .road_to_draft .program-column-visual-caption {
+  display: block;
+  margin-top: 0.8em;
+}
 .draft .road_to_draft .program-column-number {
   background: #ff0000;
   color: #fff;
@@ -340,7 +344,7 @@ footer {
 }
 .draft .road_to_draft .program-column-title dt {
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.6;
   font-weight: bold;
 }
 .draft .road_to_draft .program-column-title dd {

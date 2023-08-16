@@ -409,6 +409,10 @@ div#main {
     .program-column-visual {
       flex: 0 0 360px;
       position: relative;
+      &-caption {
+          display: block;
+          margin-top: .8em;
+      }
     }
 
     .program-column-number {
@@ -432,7 +436,7 @@ div#main {
 
       dt {
         font-size: 22px;
-        line-height: 1;
+        line-height: 1.6;
         font-weight: bold;
       }
 
