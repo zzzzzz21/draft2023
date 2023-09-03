@@ -205,8 +205,13 @@ footer {
   text-align: right;
 }
 .draft .player-card-name {
-  font-size: 18px;
+  font-size: 2rem;
   margin: 8px 0 0;
+}
+.draft .player-card-name span {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: normal;
 }
 .draft .player-card-profile {
   margin: 5px 0 0;
@@ -381,7 +386,7 @@ footer {
   transform: translateY(-50%) rotate(45deg);
 }
 .draft .content-text {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
 }
 .draft .content-bottom {

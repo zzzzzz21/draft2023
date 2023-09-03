@@ -265,8 +265,13 @@ footer {
   }
 
   .player-card-name {
-    font-size: 18px;
+    font-size: 2rem;
     margin: 8px 0 0;
+    span {
+      display: block;
+      font-size: .9rem;
+      font-weight: normal;
+    }
   }
 
   .player-card-profile {
@@ -480,7 +485,7 @@ footer {
   }
 
   .content-text {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.9;
   }
 
