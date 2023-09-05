@@ -538,6 +538,7 @@ div#main {
     align-items: center;
     display: flex;
     font-size: 15px;
+    white-space: nowrap;
 
     &::before {
       content: "";
